@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Компонування</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+	<input type="radio" id="first-dish" name="options" value="option1">
+	<input type="radio" id="second-dish" name="options" value="option2">
+	<input type="radio" id="desert" name="options" value="option3">
+	<input type="radio" id="salad" name="options" value="option4">
+	<input type="radio" id="snack" name="options" value="option5">
+	<input type="radio" id="all" name="options" value="option6" checked>
+	<header>
+		<img src="logo.png" alt="logotype">
+	</header>
+	<section class="journal">
+
+		<section class="dishes">
+			<section id="medovyk" class="dish">
+				<section class="dish-image">
+					<img src="https://fayni-recepty.com.ua/wp-content/uploads/2023/03/medovyk-1024x683.jpg"
+						alt="Medovyk">
+				</section>
+				<header class="dish-name">
+					<h2>Медовик зi сметанним кремом</h2>
+				</header>
+				<footer class="calorie">
+					<p>Калорійність (1 порція): 450 Ккал</p>
+				</footer>
+			</section>
+			<section id="tsezar" class="dish">
+				<section class="dish-image">
+					<img src="https://fayni-recepty.com.ua/wp-content/uploads/2023/02/tsezar-1024x683.jpg" alt="Tsezar">
+				</section>
+				<header class="dish-name">
+					<h2>Салат Цезар</h2>
+				</header>
+				<footer class="calorie">
+					<p>Калорійність (1 порція): 256 Ккал</p>
+				</footer>
+			</section>
+			<section id="zapikanka" class="dish">
+				<section class="dish-image"><img
+						src="https://fayni-recepty.com.ua/wp-content/uploads/2023/02/syrna-zapikanka-1024x683.jpg"
+						alt="Zapikanka">
+				</section>
+				<header class="dish-name">
+					<h2>Сирна запiканка</h2>
+				</header>
+				<footer class="calorie">
+					<p>Калорійність (1 порція): 354 Ккал</p>
+				</footer>
+			</section>
+			<section id="khinkali" class="dish">
+				<section class="dish-image">
+					<img src="https://fayni-recepty.com.ua/wp-content/uploads/2023/02/hinkali-1024x683.jpg"
+						alt="Khinkali">
+				</section>
+				<header class="dish-name">
+					<h2>Хiнкалi</h2>
+				</header>
+				<footer class="calorie">
+					<p>Калорійність (1 порція): 510 Ккал</p>
+				</footer>
+			</section>
+			<section id="shaurma" class="dish">
+				<section class="dish-image">
+					<img src="https://fayni-recepty.com.ua/wp-content/uploads/2022/11/shaurma-1024x683.jpg"
+						alt="shaurma">
+				</section>
+				<header class="dish-name">
+					<h2>Шаурма</h2>
+				</header>
+				<footer class="calorie">
+					<p>Калорійність (1 порція): 564 Ккал</p>
+				</footer>
+			</section>
+			<section id="kebab" class="dish">
+				<section class="dish-image">
+					<img src="https://fayni-recepty.com.ua/wp-content/uploads/2023/01/lyulya-kebab-1024x683.jpg"
+						alt="Kebab">
+				</section>
+				<header class="dish-name">
+					<h2>Люля-кебаб</h2>
+				</header>
+				<footer class="calorie">
+					<p>Калорійність (1 порція): 389 Ккал</p>
+				</footer>
+			</section>
+			<section id="sushi-salad" class="dish">
+				<section class="dish-image">
+					<img src="https://fayni-recepty.com.ua/wp-content/uploads/2022/01/salat-sushi-1024x683.jpg"
+						alt="Sushi salad">
+				</section>
+				<header class="dish-name">
+					<h2>Салат «Суші»</h2>
+				</header>
+				<footer class="calorie">
+					<p>Калорійність (1 порція): 296 Ккал</p>
+				</footer>
+			</section>
+			<section id="pizza" class="dish">
+				<section class="dish-image">
+					<img src="https://fayni-recepty.com.ua/wp-content/uploads/2020/03/pizza-1024x682.jpg" alt="Pizza">
+				</section>
+				<header class="dish-name">
+					<h2>Піца </h2>
+				</header>
+				<footer class="calorie">
+					<p>Калорійність (1 порція): 206 Ккал</p>
+				</footer>
+			</section>
+			<section id="soup" class="dish">
+				<section class="dish-image">
+					<img src="https://fayni-recepty.com.ua/wp-content/uploads/2023/01/syrnyi-sup-1024x683.jpg"
+						alt="soup">
+				</section>
+				<header class="dish-name">
+					<h2>Сирний суп </h2>
+				</header>
+				<footer class="calorie">
+					<p>Калорійність (1 порція): 140 Ккал</p>
+				</footer>
+			</section>
+		</section>
+		<section class="menu">
+			<span class="filter-name">Калорійність</span>
+			<div class="filter">
+				<div>
+					<div class="slider">
+						<div class="block-min"></div>
+						<div class="range"></div>
+						<div class="block-max"></div>
+					</div>
+					<div class="slider-values">
+						<number>0</number>
+						<number>564</number>
+					</div>
+				</div>
+			</div>
+			<div class="filters">
+				<label for="first-dish">Перші страви</label>
+				<label for="second-dish">Другі страви</label>
+				<label for="desert">Десерти</label>
+				<label for="salad">Салати</label>
+				<label for="snack">Закуски</label>
+				<label for="all">Скинути фільтр</label>
+			</div>
+		</section>
+	</section>
+	<footer>
+		<p class="contacts">Контакти: <a href="mailto:food@drinks.ua">food@drinks.ua</a></p>
+		<p class="copyright">© 2023 Food & Drinks</p>
+	</footer>
+
+</body>
+
+</html>

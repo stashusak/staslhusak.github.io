@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.filter {
+  padding: 20px;
+  /*width: 500px;*/
+}
+
+.filter>div {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter>div>div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter .slider {
+  position: relative;
+  height: 3px;
+  border-radius: 20px;
+  background: #ffffff;
+}
+
+.filter .range {
+  position: absolute;
+  background: #a4a4a4;
+  width: 50%;
+  border: none;
+  height: 3px;
+  left: 10%;
+  border-radius: 20px;
+}
+
+.filter .block-min,
+.block-max {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: -4px;
+  background: #000000;
+  border: 1px solid #000;
+  border-radius: 20px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+.filter .block-max {
+  right: 37%;
+}
+
+.filter .block-min {
+  left: 10%;
+}
+
+.filter-name {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+
+@media screen and (min-width: 1200px) {
+
+  #first-dish:checked~section #shaurma,
+  #first-dish:checked~section #kebab,
+  #first-dish:checked~section #sushi-salad,
+  #first-dish:checked~section #khinkali,
+  #first-dish:checked~section #medovyk,
+  #first-dish:checked~section #tsezar,
+  #first-dish:checked~section #zapikanka {
+    visibility: hidden;
+    order: 10;
+  }
+
+  #second-dish:checked~section #pizza,
+  #second-dish:checked~section #soup,
+  #second-dish:checked~section #sushi-salad,
+  #second-dish:checked~section #medovyk,
+  #second-dish:checked~section #tsezar,
+  #second-dish:checked~section #zapikanka {
+    visibility: hidden;
+    order: 10;
+  }
+
+  #desert:checked~section #pizza,
+  #desert:checked~section #soup,
+  #desert:checked~section #shaurma,
+  #desert:checked~section #kebab,
+  #desert:checked~section #sushi-salad,
+  #desert:checked~section #khinkali,
+  #desert:checked~section #tsezar {
+    visibility: hidden;
+    order: 10;
+  }
+
+  #salad:checked~section #pizza,
+  #salad:checked~section #soup,
+  #salad:checked~section #shaurma,
+  #salad:checked~section #kebab,
+  #salad:checked~section #khinkali,
+  #salad:checked~section #medovyk,
+  #salad:checked~section #zapikanka {
+    visibility: hidden;
+    order: 10;
+  }
+
+  #snack:checked~section #pizza,
+  #snack:checked~section #soup,
+  #snack:checked~section #medovyk,
+  #snack:checked~section #zapikanka {
+    visibility: hidden;
+    order: 10;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+
+  #first-dish:checked~section #shaurma,
+  #first-dish:checked~section #kebab,
+  #first-dish:checked~section #sushi-salad,
+  #first-dish:checked~section #khinkali,
+  #first-dish:checked~section #medovyk,
+  #first-dish:checked~section #tsezar,
+  #first-dish:checked~section #zapikanka {
+    display: none;
+  }
+
+  #second-dish:checked~section #pizza,
+  #second-dish:checked~section #soup,
+  #second-dish:checked~section #sushi-salad,
+  #second-dish:checked~section #medovyk,
+  #second-dish:checked~section #tsezar,
+  #second-dish:checked~section #zapikanka {
+    display: none;
+  }
+
+  #desert:checked~section #pizza,
+  #desert:checked~section #soup,
+  #desert:checked~section #shaurma,
+  #desert:checked~section #kebab,
+  #desert:checked~section #sushi-salad,
+  #desert:checked~section #khinkali,
+  #desert:checked~section #tsezar {
+    display: none;
+  }
+
+  #salad:checked~section #pizza,
+  #salad:checked~section #soup,
+  #salad:checked~section #shaurma,
+  #salad:checked~section #kebab,
+  #salad:checked~section #khinkali,
+  #salad:checked~section #medovyk,
+  #salad:checked~section #zapikanka {
+    display: none;
+  }
+
+  #snack:checked~section #pizza,
+  #snack:checked~section #soup,
+  #snack:checked~section #medovyk,
+  #snack:checked~section #zapikanka {
+    display: none;
+  }
+}
+
+input[type="radio"] {
+  position: absolute;
+  left: -8000px;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.filters label:hover {
+  background: yellowgreen;
+  color: white;
+}
+
+.filters label {
+  padding: 0.5rem 1rem;
+  margin-bottom: 0.25rem;
+  border-radius: 2rem;
+  min-width: 50px;
+  line-height: normal;
+  cursor: pointer;
+  transition: all 0.1s;
+  background-color: aquamarine;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto;
+  grid-row-gap: 10px;
+}
+
+header img {
+  width: 250px;
+}
+
+header {
+  display: grid;
+  justify-content: center;
+}
+
+.journal {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    "dishes menu"
+  ;
+  grid-gap: 20px;
+  padding: 0 20px;
+}
+
+.dishes {
+  grid-area: dishes;
+}
+
+.menu {
+  grid-area: menu;
+  background-color: aliceblue;
+}
+
+.dish {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-areas:
+    "dish-image dish-name"
+    "calorie calorie";
+  background-color: aliceblue;
+  grid-gap: 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.dishes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.dish-image {
+  grid-area: dish-image;
+}
+
+.dish-name {
+  grid-area: dish-name;
+}
+
+.calorie {
+  grid-area: calorie;
+  border-top: 1px solid;
+  font-size: 14px;
+}
+
+.dish-image img {
+  width: 100%;
+  height: 90%;
+}
+
+.dish:hover {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+h2 {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 1200px) {
+  .journal {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "menu"
+      "dishes";
+    grid-gap: 20px;
+  }
+
+  .filter {
+    display: none;
+  }
+
+  .filter-name {
+    display: none;
+  }
+
+  .filters {
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+
+    padding: 0;
+  }
+
+  .filters>* {
+    flex: 1 1 25%;
+  }
+
+  .dish {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "dish-image"
+      "dish-name";
+    background-color: aliceblue;
+    grid-gap: 5px;
+    padding: 5px;
+  }
+
+  .calorie {
+    display: none;
+  }
+
+  .dish-image img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .menu {
+    grid-area: menu;
+    background-color: rgba(240, 248, 255, 0);
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .journal {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "menu"
+      "dishes";
+    grid-gap: 20px;
+  }
+
+  .filter {
+    display: none;
+  }
+
+  .filter-name {
+    display: none;
+  }
+
+  .filters {
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 10px;
+
+    padding: 0;
+  }
+
+  .filters>* {
+    flex: 1 1 33%;
+  }
+
+  .dish {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+      "dish-image";
+    background-color: rgba(240, 248, 255, 0);
+    grid-gap: 5px;
+    padding: 5px;
+  }
+
+  .calorie {
+    display: none;
+  }
+
+  .dish-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+  }
+
+  .menu {
+    grid-area: menu;
+    background-color: rgba(240, 248, 255, 0);
+  }
+
+  .dish-name {
+    display: none;
+  }
+
+  .dishes {
+    grid-template-columns: auto;
+    grid-gap: 20px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+  }
+
+  footer>* {
+    margin: 0;
+  }
+}
